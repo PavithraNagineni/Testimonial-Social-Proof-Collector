@@ -13,16 +13,14 @@ export default function Landing() {
       <section className="max-w-6xl mx-auto px-5 pt-16 pb-20 grid md:grid-cols-2 gap-12 items-center">
         <div>
           <h1 className="font-display text-4xl md:text-5xl leading-tight text-ink-900">
-            Collect testimonials your customers actually want to write.
+            A simple tool to collect and display testimonials.
           </h1>
           <p className="mt-5 text-ink-700 text-lg max-w-md">
-            Launch a branded collection page in minutes, gather ratings and reviews without
-            asking anyone to create an account, and turn approved stories into an embeddable
-            wall of love for your site.
+            I built this project to help anyone gather reviews easily. You can create a space, share a link with your users, and build a "Wall of Love" without forcing people to create an account.
           </p>
-          <div className="mt-8 flex gap-3">
+          <div className="mt-8 flex flex-col sm:flex-row gap-3">
             <Link to={user ? '/dashboard' : '/signup'}>
-              <Button size="lg">{user ? 'Go to dashboard' : 'Start collecting — free'}</Button>
+              <Button size="lg">{user ? 'Go to dashboard' : 'Create an account'}</Button>
             </Link>
             <a href="#how-it-works">
               <Button variant="secondary" size="lg">
@@ -30,22 +28,24 @@ export default function Landing() {
               </Button>
             </a>
           </div>
+          <p className="mt-6 text-sm text-ink-500 font-medium">
+            👋 Built by Pavithra for the MERN Stack Evaluation
+          </p>
         </div>
 
         <Card className="p-6">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 rounded-full bg-ink-900 text-paper-50 flex items-center justify-center font-display">
-              A
+              J
             </div>
             <div>
-              <p className="text-sm font-semibold text-ink-900">Ava Patel</p>
-              <p className="text-xs text-ink-600">Product Manager, Northline</p>
+              <p className="text-sm font-semibold text-ink-900">John Doe</p>
+              <p className="text-xs text-ink-600">Test User</p>
             </div>
           </div>
           <StarRatingDisplay value={5} />
           <p className="mt-3 text-sm text-ink-800 leading-relaxed">
-            "We went from zero social proof to a beautiful testimonials page in a single
-            afternoon. The wall of love widget looks fantastic embedded on our landing page."
+            "This is a sample review! The MERN stack project works perfectly. I was able to submit this without even logging in."
           </p>
         </Card>
       </section>
